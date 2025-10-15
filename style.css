@@ -1,0 +1,17 @@
+*{
+    background-color: rgb(143, 143, 143);
+}
+
+.title {
+    color: rgb(255, 255, 255);
+    outline-color: rgb(0, 0, 0);
+    margin-left: 740px;
+    font-size: 80px;
+}
+
+.text {
+    color: black;
+    margin-left: 1080px;
+    margin-top: 700px;
+    font-size: 35px;
+}
