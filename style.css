@@ -1,0 +1,181 @@
+/* =========================
+   BACKGROUND ANIMATION
+========================= */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  animation: gradient 40s ease infinite;
+  background-image: linear-gradient(
+    #511D43,
+    rgb(184, 53, 71),
+    #420718,
+    #1a083b,
+    #29032b,
+    rgb(184, 105, 53)
+  );
+  background-size: 400% 400%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+  background: #c09b9b;
+}
+
+.navigation li {
+  display: flex;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  font-size: 150%;
+  color: white;
+}
+
+.navigation a:hover {
+  background: #DC2525;
+}
+
+/* Responsive nav */
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .navigation {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* =========================
+   LAYOUT CONTAINER
+========================= */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5em;
+  padding: 2rem;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: #111;
+  color: white;
+  padding: 1rem;
+}
+
+/* =========================
+   TEXT / TITLE
+========================= */
+
+.title {
+  color: white;
+  font-size: 80px;
+  text-align: center;
+  margin: 0;
+}
+
+.text {
+  color: black;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* =========================
+   OPTIONAL: NAV CLEANUP
+========================= */
+
+.navigation li:last-of-type a {
+  border-bottom: none;
+}
+
+.watermark {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 999999;
+
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  opacity: 1;
+
+  pointer-events: none;
+    font-family: "Brush Script MT", cursive;
+
+
+  text-shadow: 
+    0 2px 5px rgba(0, 0, 0, 0.9),
+    0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+  background: #c09b9b;
+}
+
+/* left brand */
+.brand {
+  font-family: "Brush Script MT", cursive;
+  font-size: 28px;
+  color: white;
+  padding: 1em;
+}
+
+/* nav links container spacing fix */
+.navigation li:not(.brand) {
+  display: flex;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  font-size: 150%;
+  color: white;
+}
+
+.navigation a:hover {
+  background: #DC2525;
+}
